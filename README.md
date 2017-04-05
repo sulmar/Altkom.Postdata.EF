@@ -5,7 +5,7 @@ https://github.com/sulmar/ef-tutorial/wiki
 
 
 ### Indeksy
-http://stackoverflow.com/questions/22618237/how-to-create-index-in-entity-framework-6-2-with-code-first
+https://github.com/sulmar/ef-tutorial/wiki/Indexes
 
 
 ### Polecenia migracji
