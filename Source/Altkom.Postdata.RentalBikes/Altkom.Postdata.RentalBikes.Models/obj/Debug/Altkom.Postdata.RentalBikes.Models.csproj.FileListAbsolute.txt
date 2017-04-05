@@ -1,0 +1,5 @@
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.Models\bin\Debug\Altkom.Postdata.RentalBikes.Models.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.Models\bin\Debug\Altkom.Postdata.RentalBikes.Models.pdb
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.Models\obj\Debug\Altkom.Postdata.RentalBikes.Models.csprojResolveAssemblyReference.cache
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.Models\obj\Debug\Altkom.Postdata.RentalBikes.Models.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.Models\obj\Debug\Altkom.Postdata.RentalBikes.Models.pdb

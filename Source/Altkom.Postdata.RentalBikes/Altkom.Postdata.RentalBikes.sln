@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.RentalBikes.Models", "Altkom.Postdata.RentalBikes.Models\Altkom.Postdata.RentalBikes.Models.csproj", "{739244EE-88B7-411C-A0F0-6D98158659F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.EF.DAL", "Altkom.Postdata.EF.DAL\Altkom.Postdata.EF.DAL.csproj", "{20CC4152-6AE1-4FED-907B-C2758A50FE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.RentalBikes.ConsoleClient", "Altkom.Postdata.RentalBikes.ConsoleClient\Altkom.Postdata.RentalBikes.ConsoleClient.csproj", "{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{739244EE-88B7-411C-A0F0-6D98158659F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739244EE-88B7-411C-A0F0-6D98158659F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739244EE-88B7-411C-A0F0-6D98158659F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CC4152-6AE1-4FED-907B-C2758A50FE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CC4152-6AE1-4FED-907B-C2758A50FE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CC4152-6AE1-4FED-907B-C2758A50FE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CC4152-6AE1-4FED-907B-C2758A50FE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

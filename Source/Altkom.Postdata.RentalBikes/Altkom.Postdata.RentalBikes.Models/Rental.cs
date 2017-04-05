@@ -22,6 +22,6 @@ namespace Altkom.Postdata.RentalBikes.Models
 
         public DateTime? ToRentalDateTime { get; set; }
 
-        public decimal Cost { get; set; }
+        public decimal? Cost { get; set; }
     }
 }

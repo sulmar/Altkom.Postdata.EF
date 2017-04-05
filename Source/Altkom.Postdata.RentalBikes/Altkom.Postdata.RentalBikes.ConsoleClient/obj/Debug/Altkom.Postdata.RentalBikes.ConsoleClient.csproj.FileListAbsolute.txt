@@ -1,0 +1,14 @@
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.exe.config
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.exe
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.pdb
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.EF.DAL.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.RentalBikes.Models.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\EntityFramework.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.EF.DAL.pdb
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\Altkom.Postdata.RentalBikes.Models.pdb
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\EntityFramework.xml
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\obj\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\obj\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.exe
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.RentalBikes.ConsoleClient\obj\Debug\Altkom.Postdata.RentalBikes.ConsoleClient.pdb
