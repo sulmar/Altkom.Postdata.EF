@@ -1,5 +1,12 @@
 # Altkom.Postdata.EF
 
+
+## Pytania
+- W jaki sposób wywołać skrypt z migracji?
+- W jaki sposób utworzyć indeksy?
+- Czy EF wspiera własne typy SQL Server?
+
+
 ## Tutorial
 https://github.com/sulmar/ef-tutorial/wiki
 
