@@ -1,5 +1,11 @@
 # Altkom.Postdata.EF
 
+## Tutorial
+https://github.com/sulmar/ef-tutorial/wiki
+
+
+### Polecenia migracji
+https://github.com/sulmar/ef-tutorial/wiki/Migrations
 
 ## Model
 
