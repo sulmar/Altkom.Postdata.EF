@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20CC4152-6AE1-4FED-907B-C2758A50FE87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Altkom.Postdata.EF.DAL</RootNamespace>
+    <AssemblyName>Altkom.Postdata.EF.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\CustomerConfiguration.cs" />
+    <Compile Include="Configurations\RentalConfiguration.cs" />
+    <Compile Include="Configurations\StationConfiguration.cs" />
+    <Compile Include="Configurations\VehicleConfiguration.cs" />
+    <Compile Include="Conventions\CustomConvention.cs" />
+    <Compile Include="Conventions\KeyConvention.cs" />
+    <Compile Include="Conventions\StringConvention.cs" />
+    <Compile Include="Conventions\DateTimeConvention.cs" />
+    <Compile Include="Migrations\201704050948132_InitialCreate.cs" />
+    <Compile Include="Migrations\201704050948132_InitialCreate.Designer.cs">
+      <DependentUpon>201704050948132_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051014524_AddAltitudeToLocation.cs" />
+    <Compile Include="Migrations\201704051014524_AddAltitudeToLocation.Designer.cs">
+      <DependentUpon>201704051014524_AddAltitudeToLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051045404_AddMaxSpeedToScooter.cs" />
+    <Compile Include="Migrations\201704051045404_AddMaxSpeedToScooter.Designer.cs">
+      <DependentUpon>201704051045404_AddMaxSpeedToScooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051046128_ChangeCostOnRental.cs" />
+    <Compile Include="Migrations\201704051046128_ChangeCostOnRental.Designer.cs">
+      <DependentUpon>201704051046128_ChangeCostOnRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051048152_AddAmountToVehicle.cs" />
+    <Compile Include="Migrations\201704051048152_AddAmountToVehicle.Designer.cs">
+      <DependentUpon>201704051048152_AddAmountToVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051222491_ChangeCustomer.cs" />
+    <Compile Include="Migrations\201704051222491_ChangeCustomer.Designer.cs">
+      <DependentUpon>201704051222491_ChangeCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051226197_ChangeCustomer1.cs" />
+    <Compile Include="Migrations\201704051226197_ChangeCustomer1.Designer.cs">
+      <DependentUpon>201704051226197_ChangeCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051227488_ChangeCustomer2.cs" />
+    <Compile Include="Migrations\201704051227488_ChangeCustomer2.Designer.cs">
+      <DependentUpon>201704051227488_ChangeCustomer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051229402_ChangeNumberOnVehicle.cs" />
+    <Compile Include="Migrations\201704051229402_ChangeNumberOnVehicle.Designer.cs">
+      <DependentUpon>201704051229402_ChangeNumberOnVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051235258_ChangeDateTimeTypeOnRental.cs" />
+    <Compile Include="Migrations\201704051235258_ChangeDateTimeTypeOnRental.Designer.cs">
+      <DependentUpon>201704051235258_ChangeDateTimeTypeOnRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051251478_ChangeStationsSchema.cs" />
+    <Compile Include="Migrations\201704051251478_ChangeStationsSchema.Designer.cs">
+      <DependentUpon>201704051251478_ChangeStationsSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051253114_ChangeDefaultSchema.cs" />
+    <Compile Include="Migrations\201704051253114_ChangeDefaultSchema.Designer.cs">
+      <DependentUpon>201704051253114_ChangeDefaultSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051310091_ChangeString.cs" />
+    <Compile Include="Migrations\201704051310091_ChangeString.Designer.cs">
+      <DependentUpon>201704051310091_ChangeString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051325251_MyScript.cs" />
+    <Compile Include="Migrations\201704051325251_MyScript.Designer.cs">
+      <DependentUpon>201704051325251_MyScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051343522_MyStoreProcedure.cs" />
+    <Compile Include="Migrations\201704051343522_MyStoreProcedure.Designer.cs">
+      <DependentUpon>201704051343522_MyStoreProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704051355182_AddIndexesToRental.cs" />
+    <Compile Include="Migrations\201704051355182_AddIndexesToRental.Designer.cs">
+      <DependentUpon>201704051355182_AddIndexesToRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="RentalBikesContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Altkom.Postdata.RentalBikes.Models\Altkom.Postdata.RentalBikes.Models.csproj">
+      <Project>{739244EE-88B7-411C-A0F0-6D98158659F9}</Project>
+      <Name>Altkom.Postdata.RentalBikes.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704050948132_InitialCreate.resx">
+      <DependentUpon>201704050948132_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051014524_AddAltitudeToLocation.resx">
+      <DependentUpon>201704051014524_AddAltitudeToLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051045404_AddMaxSpeedToScooter.resx">
+      <DependentUpon>201704051045404_AddMaxSpeedToScooter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051046128_ChangeCostOnRental.resx">
+      <DependentUpon>201704051046128_ChangeCostOnRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051048152_AddAmountToVehicle.resx">
+      <DependentUpon>201704051048152_AddAmountToVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051222491_ChangeCustomer.resx">
+      <DependentUpon>201704051222491_ChangeCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051226197_ChangeCustomer1.resx">
+      <DependentUpon>201704051226197_ChangeCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051227488_ChangeCustomer2.resx">
+      <DependentUpon>201704051227488_ChangeCustomer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051229402_ChangeNumberOnVehicle.resx">
+      <DependentUpon>201704051229402_ChangeNumberOnVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051235258_ChangeDateTimeTypeOnRental.resx">
+      <DependentUpon>201704051235258_ChangeDateTimeTypeOnRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051251478_ChangeStationsSchema.resx">
+      <DependentUpon>201704051251478_ChangeStationsSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051253114_ChangeDefaultSchema.resx">
+      <DependentUpon>201704051253114_ChangeDefaultSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051310091_ChangeString.resx">
+      <DependentUpon>201704051310091_ChangeString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051325251_MyScript.resx">
+      <DependentUpon>201704051325251_MyScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051343522_MyStoreProcedure.resx">
+      <DependentUpon>201704051343522_MyStoreProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704051355182_AddIndexesToRental.resx">
+      <DependentUpon>201704051355182_AddIndexesToRental.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\201704051325251_UpdateCustomer_Up.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\201704051325251_UpdateCustomer_Down.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
