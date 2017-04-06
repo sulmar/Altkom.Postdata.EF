@@ -1,3 +1,7 @@
+
+## Model
+https://github.com/sulmar/Altkom.Postdata.EF/wiki/Model
+
 ## Tutorial 
 https://github.com/sulmar/ef-tutorial/wiki 
 
