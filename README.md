@@ -1,5 +1,3 @@
-* UWAGA - z przyczyn technicznych nie udało mi się dzisiaj synchronizować projektu. Rozwiążę ten problem jutro na szkoleniu.
-
 
 ## Model
 https://github.com/sulmar/Altkom.Postdata.EF/wiki/Model
