@@ -19,5 +19,7 @@ namespace Altkom.Postdata.RentalBikes.Models
         public string Address { get; set; }
 
         public byte Capacity { get; set; }
+
+        // public byte[] RowVersion { get; set; }
     }
 }

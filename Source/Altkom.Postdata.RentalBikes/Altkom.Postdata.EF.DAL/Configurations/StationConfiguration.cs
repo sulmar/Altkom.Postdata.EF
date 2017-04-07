@@ -14,7 +14,17 @@ namespace Altkom.Postdata.EF.DAL.Configurations
         {
 
             ToTable("crm.Stations");
-            
+
+            MapToStoredProcedures(s =>
+            {
+                s.Update(u => u.HasName("modify_station"));
+                s.Insert(u => u.HasName("add_station"));
+                s.Delete(u => u.HasName("remove_station"));
+            });
+
+
+         
+
         }
     }
 }

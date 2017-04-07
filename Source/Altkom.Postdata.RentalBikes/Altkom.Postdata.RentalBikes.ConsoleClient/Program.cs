@@ -6,6 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.Data.SqlClient;
+using System.Transactions;
+using System.Threading;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Spatial;
+using System.Globalization;
 
 namespace Altkom.Postdata.RentalBikes.ConsoleClient
 {
@@ -13,18 +20,43 @@ namespace Altkom.Postdata.RentalBikes.ConsoleClient
     {
         static void Main(string[] args)
         {
+            AsyncTest();
 
-            BatchUpdateTest();
+            FindClosestBikeTest();
 
-            AddProjectTest();
+            GeographyTest();
 
-            RemoveEmployeeFromProjectTest();
+            MetadataTest();
 
-            LazyLoadingTest();
+            //MultiUserTest();
+            //return;
 
-            EagerlyLoadingTest();
 
-            
+            //DistributedTransacationTest();
+
+            //TransactionTest();
+
+            //AddStationsTest();
+
+            //ExecuteProcedureTest();
+
+            //ExecuteSqlWithParameterTest();
+
+            //ExecuteSqlTest();
+
+            //JoinTest();
+
+            //TraceSqlTest();
+
+           // BatchUpdateTest();
+
+            // AddProjectTest();
+
+            // RemoveEmployeeFromProjectTest();
+
+            // LazyLoadingTest();
+
+            // EagerlyLoadingTest();
 
 
           //  GetVehiclesTest();
@@ -34,7 +66,7 @@ namespace Altkom.Postdata.RentalBikes.ConsoleClient
             // AddCustomerTest();
 
              // AddBikeTest();
-            // AddStationsTest();
+           
 
             //AddRentalTest();
            
@@ -47,7 +79,7 @@ namespace Altkom.Postdata.RentalBikes.ConsoleClient
 
 
             using (var context = new RentalBikesContext())
-            {
+            {                
                 var connection  = context.Database.Connection;
 
                 Console.WriteLine(connection.ConnectionString);
@@ -58,9 +90,6 @@ namespace Altkom.Postdata.RentalBikes.ConsoleClient
             GetScootersTest();
 
                 // CheckExistsDatabaseTest();
-
-            
-
          
 
             GetVehiclesTest();
@@ -70,11 +99,393 @@ namespace Altkom.Postdata.RentalBikes.ConsoleClient
 
         }
 
+        private static void AsyncTest()
+        {
+            Task.Run(() => AsyncTestAsync());
+        }
+
+        private async static Task AsyncTestAsync()
+        {
+            var myLocation = DbGeography.FromText("POINT (52.10 21.05)");
+
+            using (var context = new RentalBikesContext())
+            {
+
+                var bikes = context.Vehicles.OfType<Bike>()
+                    .ToList();
+
+                var latitude = 52.00;
+
+                foreach (var item in bikes)
+                {
+                    var wkt = string.Format("POINT ({0} 21.05)", latitude.ToString(CultureInfo.InvariantCulture));
+
+                    item.Location = DbGeography.FromText(wkt);
+
+                    latitude = latitude + 0.2;
+                }
+
+                await context.SaveChangesAsync();
+
+
+                var bike = await context.Vehicles.OfType<Bike>()
+                    .OrderBy(v => v.Location.Distance(myLocation))
+                    .FirstOrDefaultAsync();
+
+
+                var distance = bike.Location.Distance(myLocation);
+
+                Console.WriteLine(distance);
+
+
+            }
+        }
+
+        private static void FindClosestBikeTest()
+        {
+            var myLocation = DbGeography.FromText("POINT (52.10 21.05)");
+
+
+            using (var context = new RentalBikesContext())
+            {
+
+                var bikes = context.Vehicles.OfType<Bike>()
+                    .ToList();
+
+                var latitude = 52.00;
+
+                foreach (var item in bikes)
+                {
+                    var wkt = string.Format("POINT ({0} 21.05)", latitude.ToString(CultureInfo.InvariantCulture));
+
+                    item.Location = DbGeography.FromText(wkt);
+
+                    latitude = latitude + 0.2;
+                }
+
+                context.SaveChanges();
+
+
+                var bike = context.Vehicles.OfType<Bike>()
+                    .OrderBy(v => v.Location.Distance(myLocation))
+                    .FirstOrDefault();
+
+
+                var distance = bike.Location.Distance(myLocation);                
+
+                Console.WriteLine(distance);
+
+
+            }
+        }
+
+        private static void GeographyTest()
+        {
+            var myLocation = DbGeography.FromText("POINT (52.10 21.05)");
+
+
+            using (var context = new RentalBikesContext())
+            {
+                var bike = context.Vehicles.OfType<Bike>().First();
+
+                // WKT 
+
+                bike.Location = DbGeography.FromText("POINT (52.10 21.0)");
+
+                context.SaveChanges();
+            }
+        }
+
+        private static void MetadataTest()
+        {
+            using (var context = new RentalBikesContext())
+            {
+                var objectContext = ((IObjectContextAdapter)context).ObjectContext;
+
+                var workspace = objectContext.MetadataWorkspace;
+
+                IEnumerable<EntityType> tables = workspace.GetItems<EntityType>(DataSpace.SSpace);
+
+                foreach (var table in tables)
+                {
+                    Console.WriteLine(table.Name);
+                    Console.WriteLine("=============");
+
+                    foreach (var property in table.Properties)
+                    {
+                        var isPrimaryKey = table.KeyProperties.Contains(property);
+
+                        if (isPrimaryKey)
+                        {
+                            Console.Write("PK");
+                        }
+
+                        Console.WriteLine($"{property.Name}");
+                    }
+                }
+
+
+            }
+        }
+
+        private static void MultiUserTest()
+        {
+            Console.WriteLine("Podaj nazwe");
+
+            var name = Console.ReadLine();
+
+            using (var context = new RentalBikesContext())
+            {
+                var station = context.Stations.Find(3);
+
+                station.Name = name;
+
+                Console.WriteLine("Press any key");
+
+                Console.ReadKey();
+
+                try
+                {
+
+                    context.SaveChanges();
+                }
+                catch(DbUpdateConcurrencyException e)
+                {
+                    Console.WriteLine(e.Message);
+
+                    Console.ReadLine();
+                }
+            }
+
+            
+        }
+
+        private static void DistributedTransacationTest()
+        {
+            var station1 = new Station
+            {
+                Symbol = "ST010",
+                Name = "PKS",
+                Address = "Autobusowa",
+                Capacity = 10,
+                Location = new Location { Latitude = 52.01, Longitude = 23.05, Altitude = 0 },
+                CreateDate = DateTime.Now,
+            };
+
+            var station2 = new Station
+            {
+                Symbol = "ST011",
+                Name = "Uniwerek",
+                Address = "Akademicka",
+                Capacity = 10,
+                Location = new Location { Latitude = 52.01, Longitude = 23.05, Altitude = 0 },
+                CreateDate = DateTime.Now,
+            };
+
+            try
+            {
+                using (var scope = new TransactionScope())
+                {
+                    using (var context1 = new RentalBikesContext())
+                    {
+                        context1.Stations.Add(station1);
+
+                        context1.SaveChanges();
+                    }
+
+                    using (var context2 = new RentalBikesContext())
+                    {
+                        context2.Stations.Add(station2);
+
+                        context2.SaveChanges();
+                    }
+
+                    scope.Complete();
+                }
+            }
+            catch(Exception)
+            {
+
+            }
+
+        }
+
+        private static void TransactionTest()
+        {
+            var station1 = new Station
+            {
+                Symbol = "ST010",
+                Name = "PKS",
+                Address = "Autobusowa",
+                Capacity = 10,
+                Location = new Location { Latitude = 52.01, Longitude = 23.05, Altitude = 0 },
+                CreateDate = DateTime.Now,
+            };
+
+            var station2 = new Station
+            {
+                Symbol = "ST011",
+                Name = "Uniwerek",
+                Address = "Akademicka",
+                Capacity = 10,
+                Location = new Location { Latitude = 52.01, Longitude = 23.05, Altitude = 0 },
+                CreateDate = DateTime.Now,
+            };
+
+
+            using (var context = new RentalBikesContext())
+            using( var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.Stations.Add(station1);
+
+                    context.SaveChanges();
+
+                    context.Stations.Add(station2);
+
+                    context.SaveChanges();
+
+                    transaction.Commit();
+                }
+                catch(Exception)
+                {
+                    transaction.Rollback();
+                }
+            }
+        }
+
+        private static void ExecuteProcedureTest()
+        {
+            var year = 2016;
+
+            var sql = "uspGetVehiclesByProductionYear @year";
+
+            // lub
+
+            // var sql = "exec uspGetVehiclesByProductionYear @year";
+
+            var yearParameter = new SqlParameter("@year", year);
+
+            using (var context = new RentalBikesContext())
+            {
+                var vehicles = context.Database
+                    .SqlQuery<VehicleInfo>(sql, yearParameter)
+                    .ToList();
+
+                foreach (var vehicle in vehicles)
+                {
+                    Console.WriteLine($"{vehicle.Color} {vehicle.Size}");
+                }
+            }
+        }
+
+        private static void ExecuteSqlTest()
+        {
+            var sql = "update alt.Vehicles set IsActive = 1 where IsActive = 0";
+
+            using (var context = new RentalBikesContext())
+            {
+                context.Database.ExecuteSqlCommand(sql);
+            }
+        }
+
+        private static void ExecuteSqlWithParameterTest()
+        {
+            var vehicleId = 2;
+
+            // SQL injection
+            // var sql = $"update alt.Vehicles set IsActive = 0 where VehicleId = {vehicleId}";
+
+            var sql = $"update alt.Vehicles set IsActive = 0 where VehicleId = @VehicleId";
+
+            using (var context = new RentalBikesContext())
+            {
+                var vehicleIdParameter = new SqlParameter(@"VehicleId", vehicleId);
+
+                context.Database.ExecuteSqlCommand(sql, vehicleIdParameter);
+            }
+        }
+
+        private static void JoinTest()
+        {
+            using (var context = new RentalBikesContext())
+            {
+                var query = context.Stations
+                    .Join(context.Projects,
+                        s => s.StationId,
+                        p => p.ProjectId,
+                        (s, p) => new { Station = s, Project = p });
+
+                // left outer join
+                var query2 = context.Stations
+                    .GroupJoin(context.Projects,
+                        s => s.StationId,
+                        p => p.ProjectId,
+                        (s, p) => new { Station = s, Project = p.DefaultIfEmpty() });
+
+                // cross apply
+
+                var results = query2.ToList();
+
+            }
+        }
+
+        private static void TraceSqlTest()
+        {
+            using (var context = new RentalBikesContext())
+            {
+                var rental = context.Rentals
+                    .Where(r => r.Bike.IsActive == true)
+                    .First();
+                    
+                        
+                var query = (from v in context.Vehicles
+                            where v.ProductionYear == 2016
+                            select v);
+
+
+                var projects = context.Projects;
+
+                
+
+                
+
+
+                // Expression (wyrażenie)
+
+                // Linq To Objects -> iteracje
+
+                // Linq To Entities -> SQL
+
+                // Linq To XML -> XPath
+
+                var isFilter = true;
+
+                var vehicles = context.Vehicles
+                    .Where(v => v.ProductionYear == 2016);
+
+
+                if (isFilter)
+                {
+                    vehicles = vehicles.Where(v => v.IsActive);
+                }
+
+
+                        
+                // materializacja                
+                vehicles
+                    .OrderByDescending(v => v.VehicleId)
+                    .ThenBy(v=>v.Number)
+                    .ToList()
+                    .ForEach(v => Console.WriteLine(v.Number));
+            }
+        }
+
         private static void BatchUpdateTest()
         {
             using (var context = new RentalBikesContext())
             {
-
                 var projects = context.Projects.ToList();
 
                 foreach (var project in projects)

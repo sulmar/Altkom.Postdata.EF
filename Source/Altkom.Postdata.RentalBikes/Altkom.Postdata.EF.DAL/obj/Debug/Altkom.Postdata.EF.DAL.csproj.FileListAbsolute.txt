@@ -33,3 +33,13 @@ C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.Renta
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddCreateAndModifiedDate.resources
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddTPC.resources
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddEmployees.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddStoredProceduresToStation.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.RenameStoredProceduresToStation.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddConcurencyTokenToStation.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddRowVersionToBase.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddIsRowVersionToBase.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.Change.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.RemoveRowVersion.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddRowVersion.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddRowVersionToBase1.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddDbGeographyToBike.resources

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,7 @@ namespace Altkom.Postdata.RentalBikes.Models
         public string Color { get; set; }
 
         public ICollection<Rental> Rentals { get; set; }
+
+        public DbGeography Location { get; set; }
     }
 }

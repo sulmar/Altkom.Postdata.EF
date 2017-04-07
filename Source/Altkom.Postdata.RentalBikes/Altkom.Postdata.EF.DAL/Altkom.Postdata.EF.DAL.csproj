@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\BaseConfiguration.cs" />
     <Compile Include="Configurations\CustomerConfiguration.cs" />
     <Compile Include="Configurations\RentalConfiguration.cs" />
     <Compile Include="Configurations\StationConfiguration.cs" />
@@ -145,7 +146,48 @@
     <Compile Include="Migrations\201704061341138_AddEmployees.Designer.cs">
       <DependentUpon>201704061341138_AddEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704070912061_AddStoredProceduresToStation.cs" />
+    <Compile Include="Migrations\201704070912061_AddStoredProceduresToStation.Designer.cs">
+      <DependentUpon>201704070912061_AddStoredProceduresToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704070916004_RenameStoredProceduresToStation.cs" />
+    <Compile Include="Migrations\201704070916004_RenameStoredProceduresToStation.Designer.cs">
+      <DependentUpon>201704070916004_RenameStoredProceduresToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071002488_AddConcurencyTokenToStation.cs" />
+    <Compile Include="Migrations\201704071002488_AddConcurencyTokenToStation.Designer.cs">
+      <DependentUpon>201704071002488_AddConcurencyTokenToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071015221_AddRowVersionToBase.cs" />
+    <Compile Include="Migrations\201704071015221_AddRowVersionToBase.Designer.cs">
+      <DependentUpon>201704071015221_AddRowVersionToBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071016479_AddIsRowVersionToBase.cs" />
+    <Compile Include="Migrations\201704071016479_AddIsRowVersionToBase.Designer.cs">
+      <DependentUpon>201704071016479_AddIsRowVersionToBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071020048_Change.cs" />
+    <Compile Include="Migrations\201704071020048_Change.Designer.cs">
+      <DependentUpon>201704071020048_Change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071021403_RemoveRowVersion.cs" />
+    <Compile Include="Migrations\201704071021403_RemoveRowVersion.Designer.cs">
+      <DependentUpon>201704071021403_RemoveRowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071024552_AddRowVersion.cs" />
+    <Compile Include="Migrations\201704071024552_AddRowVersion.Designer.cs">
+      <DependentUpon>201704071024552_AddRowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071034509_AddRowVersionToBase1.cs" />
+    <Compile Include="Migrations\201704071034509_AddRowVersionToBase1.Designer.cs">
+      <DependentUpon>201704071034509_AddRowVersionToBase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704071230452_AddDbGeographyToBike.cs" />
+    <Compile Include="Migrations\201704071230452_AddDbGeographyToBike.Designer.cs">
+      <DependentUpon>201704071230452_AddDbGeographyToBike.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyInitializer.cs" />
     <Compile Include="RentalBikesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -227,6 +269,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704061341138_AddEmployees.resx">
       <DependentUpon>201704061341138_AddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704070912061_AddStoredProceduresToStation.resx">
+      <DependentUpon>201704070912061_AddStoredProceduresToStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704070916004_RenameStoredProceduresToStation.resx">
+      <DependentUpon>201704070916004_RenameStoredProceduresToStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071002488_AddConcurencyTokenToStation.resx">
+      <DependentUpon>201704071002488_AddConcurencyTokenToStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071015221_AddRowVersionToBase.resx">
+      <DependentUpon>201704071015221_AddRowVersionToBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071016479_AddIsRowVersionToBase.resx">
+      <DependentUpon>201704071016479_AddIsRowVersionToBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071020048_Change.resx">
+      <DependentUpon>201704071020048_Change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071021403_RemoveRowVersion.resx">
+      <DependentUpon>201704071021403_RemoveRowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071024552_AddRowVersion.resx">
+      <DependentUpon>201704071024552_AddRowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071034509_AddRowVersionToBase1.resx">
+      <DependentUpon>201704071034509_AddRowVersionToBase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704071230452_AddDbGeographyToBike.resx">
+      <DependentUpon>201704071230452_AddDbGeographyToBike.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scripts\201704051325251_UpdateCustomer_Up.sql" />
   </ItemGroup>

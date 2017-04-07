@@ -10,7 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Altkom.Postdata.EF.DAL
-{
+{    
+
     public class RentalBikesContext : DbContext
     {
         #region DbSets
@@ -41,15 +42,23 @@ namespace Altkom.Postdata.EF.DAL
             // this.Configuration.ProxyCreationEnabled = false;
 
             // Automatyczne aplikowanie migracji
-            Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<RentalBikesContext, Migrations.Configuration>());
+            //Database.SetInitializer(
+            //    new MigrateDatabaseToLatestVersion<RentalBikesContext, Migrations.Configuration>());
+
+            Database.SetInitializer(new MyInitializer());
 
             /// DbContext : ObjectContext
-            
+
             // Pobranie ObjectContext z DbContext
             var objectContext = ((IObjectContextAdapter)this).ObjectContext;
             
             objectContext.ObjectMaterialized += ObjectContext_ObjectMaterialized;
+
+            this.Database.Log = s => Console.WriteLine(s);
+
+
+            // globalne wylaczenie sledzenia encji
+            // this.Configuration.AutoDetectChangesEnabled = false;
 
         }
 
