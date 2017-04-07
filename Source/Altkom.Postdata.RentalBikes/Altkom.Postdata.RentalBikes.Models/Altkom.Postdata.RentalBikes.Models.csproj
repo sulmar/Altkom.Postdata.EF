@@ -40,16 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Base.cs" />
     <Compile Include="Bike.cs" />
     <Compile Include="BikeType.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Horse.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="Man.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="Scooter.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="Woman.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

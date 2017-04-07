@@ -7,7 +7,7 @@ namespace Altkom.Postdata.EF.DAL.Migrations
     {
         public override void Up()
         {
-            SqlResource("Altkom.Postdata.EF.DAL.Scripts.201704051325251_UpdateCustomer_Up.sql");
+            SqlResource("Altkom.Postdata.EF.DAL.Scripts.201704051325251_UpdateCustomer_Up.sql", suppressTransaction:true);
         }
         
         public override void Down()

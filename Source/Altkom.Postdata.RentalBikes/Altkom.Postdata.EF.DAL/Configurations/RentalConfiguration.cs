@@ -24,6 +24,10 @@ namespace Altkom.Postdata.EF.DAL.Configurations
             Property(e => e.FromRentalDateTime)
                 .HasColumnAnnotation(IndexAnnotation.AnnotationName,
                     new IndexAnnotation(new IndexAttribute()));
+
+
+
+        
         }
     }
 }

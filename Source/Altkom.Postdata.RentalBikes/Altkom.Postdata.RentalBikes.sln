@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.EF.DAL", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.RentalBikes.ConsoleClient", "Altkom.Postdata.RentalBikes.ConsoleClient\Altkom.Postdata.RentalBikes.ConsoleClient.csproj", "{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Postdata.RentalBikes.Service", "Altkom.Postdata.RentalBikes.Service\Altkom.Postdata.RentalBikes.Service.csproj", "{99F74C6C-5BFC-47C8-B86F-A070B3B14F5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF21ADA3-29E9-439D-8C0F-4FD23B0E3387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F74C6C-5BFC-47C8-B86F-A070B3B14F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F74C6C-5BFC-47C8-B86F-A070B3B14F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F74C6C-5BFC-47C8-B86F-A070B3B14F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F74C6C-5BFC-47C8-B86F-A070B3B14F5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

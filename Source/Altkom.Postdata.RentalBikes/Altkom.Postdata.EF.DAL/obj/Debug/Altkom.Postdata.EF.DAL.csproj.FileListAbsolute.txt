@@ -27,3 +27,9 @@ C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.Renta
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.MyScript.resources
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.MyStoreProcedure.resources
 C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddIndexesToRental.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddCapacityToStation.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddVehicleTypeToVehicle.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddTPT.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddCreateAndModifiedDate.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddTPC.resources
+C:\Users\trener\Documents\GitHub\Altkom.Postdata.EF\Source\Altkom.Postdata.RentalBikes\Altkom.Postdata.EF.DAL\obj\Debug\Altkom.Postdata.EF.DAL.Migrations.AddEmployees.resources

@@ -121,6 +121,30 @@
     <Compile Include="Migrations\201704051355182_AddIndexesToRental.Designer.cs">
       <DependentUpon>201704051355182_AddIndexesToRental.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704060720059_AddCapacityToStation.cs" />
+    <Compile Include="Migrations\201704060720059_AddCapacityToStation.Designer.cs">
+      <DependentUpon>201704060720059_AddCapacityToStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704060821345_AddVehicleTypeToVehicle.cs" />
+    <Compile Include="Migrations\201704060821345_AddVehicleTypeToVehicle.Designer.cs">
+      <DependentUpon>201704060821345_AddVehicleTypeToVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704060934036_AddTPT.cs" />
+    <Compile Include="Migrations\201704060934036_AddTPT.Designer.cs">
+      <DependentUpon>201704060934036_AddTPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704060948423_AddCreateAndModifiedDate.cs" />
+    <Compile Include="Migrations\201704060948423_AddCreateAndModifiedDate.Designer.cs">
+      <DependentUpon>201704060948423_AddCreateAndModifiedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704060957174_AddTPC.cs" />
+    <Compile Include="Migrations\201704060957174_AddTPC.Designer.cs">
+      <DependentUpon>201704060957174_AddTPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704061341138_AddEmployees.cs" />
+    <Compile Include="Migrations\201704061341138_AddEmployees.Designer.cs">
+      <DependentUpon>201704061341138_AddEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RentalBikesContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,6 +210,24 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704060720059_AddCapacityToStation.resx">
+      <DependentUpon>201704060720059_AddCapacityToStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704060821345_AddVehicleTypeToVehicle.resx">
+      <DependentUpon>201704060821345_AddVehicleTypeToVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704060934036_AddTPT.resx">
+      <DependentUpon>201704060934036_AddTPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704060948423_AddCreateAndModifiedDate.resx">
+      <DependentUpon>201704060948423_AddCreateAndModifiedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704060957174_AddTPC.resx">
+      <DependentUpon>201704060957174_AddTPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704061341138_AddEmployees.resx">
+      <DependentUpon>201704061341138_AddEmployees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scripts\201704051325251_UpdateCustomer_Up.sql" />
   </ItemGroup>
   <ItemGroup>

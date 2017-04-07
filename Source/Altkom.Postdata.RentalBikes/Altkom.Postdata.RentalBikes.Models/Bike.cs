@@ -13,5 +13,7 @@ namespace Altkom.Postdata.RentalBikes.Models
         public string Size { get; set; }
 
         public string Color { get; set; }
+
+        public ICollection<Rental> Rentals { get; set; }
     }
 }

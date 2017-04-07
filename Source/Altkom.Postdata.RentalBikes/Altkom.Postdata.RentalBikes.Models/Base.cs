@@ -8,6 +8,8 @@ namespace Altkom.Postdata.RentalBikes.Models
 {
     public abstract class Base
     {
+        public DateTime CreateDate { get; set; }
 
+        public DateTime ModifiedDate { get; set; }
     }
 }

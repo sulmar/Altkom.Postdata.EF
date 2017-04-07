@@ -10,7 +10,7 @@ namespace Altkom.Postdata.RentalBikes.Models
     {
         public int RentalId { get; set; }
 
-        public Bike Bike { get; set; }
+        public Bike Bike { get; set; }        
 
         public Customer Rentee { get; set; }
 
